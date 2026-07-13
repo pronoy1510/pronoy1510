@@ -1,0 +1,430 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 610" width="1180" height="610" role="img" aria-label="Pronoy Biswas - GitHub Profile Banner">
+<defs>
+  <style>
+    
+    .role {
+      position: absolute;
+      font-family: 'Fira Code', monospace;
+      font-size: 17px;
+      font-weight: 600;
+      fill: #22D3EE;
+    }
+    .role-1 { animation: cycle-1 25s infinite; }
+    .role-2 { animation: cycle-2 25s infinite; }
+    .role-3 { animation: cycle-3 25s infinite; }
+    .role-4 { animation: cycle-4 25s infinite; }
+    .role-5 { animation: cycle-5 25s infinite; }
+    
+    @keyframes cycle-1 {
+      0%, 16% { opacity: 1; visibility: visible; }
+      18%, 100% { opacity: 0; visibility: hidden; }
+    }
+    @keyframes cycle-2 {
+      0%, 18% { opacity: 0; visibility: hidden; }
+      20%, 36% { opacity: 1; visibility: visible; }
+      38%, 100% { opacity: 0; visibility: hidden; }
+    }
+    @keyframes cycle-3 {
+      0%, 38% { opacity: 0; visibility: hidden; }
+      40%, 56% { opacity: 1; visibility: visible; }
+      58%, 100% { opacity: 0; visibility: hidden; }
+    }
+    @keyframes cycle-4 {
+      0%, 58% { opacity: 0; visibility: hidden; }
+      60%, 76% { opacity: 1; visibility: visible; }
+      78%, 100% { opacity: 0; visibility: hidden; }
+    }
+    @keyframes cycle-5 {
+      0%, 78% { opacity: 0; visibility: hidden; }
+      80%, 96% { opacity: 1; visibility: visible; }
+      98%, 100% { opacity: 0; visibility: hidden; }
+    }
+    
+  </style>
+  <!-- Background atmosphere -->
+  <radialGradient id="atm1" cx="18%" cy="28%" r="48%">
+    <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.2" />
+    <stop offset="100%" stop-color="#030712" stop-opacity="0" />
+  </radialGradient>
+  <radialGradient id="atm2" cx="82%" cy="72%" r="48%">
+    <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.13" />
+    <stop offset="100%" stop-color="#030712" stop-opacity="0" />
+  </radialGradient>
+  <radialGradient id="atm3" cx="50%" cy="108%" r="58%">
+    <stop offset="0%" stop-color="#10B981" stop-opacity="0.1" />
+    <stop offset="100%" stop-color="#030712" stop-opacity="0" />
+  </radialGradient>
+  <radialGradient id="atm4" cx="50%" cy="0%" r="50%">
+    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.08" />
+    <stop offset="100%" stop-color="#030712" stop-opacity="0" />
+  </radialGradient>
+  
+  <!-- Accent Gradient -->
+  <linearGradient id="accentG" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#7C3AED"/>
+    <stop offset="50%" stop-color="#22D3EE"/>
+    <stop offset="100%" stop-color="#10B981"/>
+  </linearGradient>
+  
+  <!-- Shimmer border gradient -->
+  <linearGradient id="shimmerG" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#7C3AED" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#7C3AED" stop-opacity="0.6"/>
+    <stop offset="50%" stop-color="#22D3EE" stop-opacity="0.8"/>
+    <stop offset="70%" stop-color="#10B981" stop-opacity="0.6"/>
+    <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    <animateTransform attributeName="gradientTransform" type="rotate" from="0 590 305" to="360 590 305" dur="6s" repeatCount="indefinite"/>
+  </linearGradient>
+  
+  <!-- Skill pill gradients -->
+  <linearGradient id="pillV" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.22"/>
+    <stop offset="100%" stop-color="#22D3EE" stop-opacity="0.12"/>
+  </linearGradient>
+  <linearGradient id="pillC" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#10B981" stop-opacity="0.12"/>
+  </linearGradient>
+  
+  <!-- Filters -->
+  <filter id="gSm" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="3" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="gMd" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="8" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(15,23,42,0.08)"/>
+  </filter>
+  
+  <clipPath id="mc"><rect width="1180" height="610" rx="24"/></clipPath>
+</defs>
+
+<!-- BACKGROUND -->
+<rect width="1180" height="610" rx="24" fill="#030712"/>
+<rect width="1180" height="610" rx="24" fill="url(#atm1)"/>
+<rect width="1180" height="610" rx="24" fill="url(#atm2)"/>
+<rect width="1180" height="610" rx="24" fill="url(#atm3)"/>
+<rect width="1180" height="610" rx="24" fill="url(#atm4)"/>
+
+<g clip-path="url(#mc)">
+  <!-- Moving scanline sweep -->
+  <rect x="0" y="0" width="1180" height="3" fill="rgba(255,255,255,0.03)">
+    <animateTransform attributeName="transform" type="translate" values="0,-610;0,1220" dur="9s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ====== LEFT PANEL (ECE & IoT Microchip Board) ====== -->
+  <rect x="14" y="14" width="434" height="582" rx="18" fill="#0F172A" fill-opacity="0.62" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+  <rect x="14" y="14" width="434" height="582" rx="18" fill="none" stroke="rgba(34,211,238,0.14)" stroke-width="1" filter="url(#gMd)"/>
+  
+  <!-- Terminal window top controls -->
+  <circle cx="42" cy="37" r="6.5" fill="#FF5F56"/>
+  <circle cx="62" cy="37" r="6.5" fill="#FFBD2E"/>
+  <circle cx="82" cy="37" r="6.5" fill="#27C93F"/>
+  <text x="231" y="43" font-family="'Fira Code',monospace" font-size="11" fill="#94A3B8" opacity="0.5" text-anchor="middle">iot_mcu_node.sys</text>
+
+  <!-- Animated Circuit Board Layout inside Left Panel -->
+  <g transform="translate(0, 40)">
+    <!-- Circuit Traces -->
+    <!-- Trace 1 -->
+    <path id="path1" d="M 80,180 L 160,180 L 200,220 L 200,270" fill="none" stroke="rgba(34,211,238,0.25)" stroke-width="1.8" stroke-dasharray="4,4">
+      <animate attributeName="stroke-dashoffset" values="40;0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <!-- Trace 2 -->
+    <path id="path2" d="M 380,180 L 300,180 L 260,220 L 260,270" fill="none" stroke="rgba(34,211,238,0.25)" stroke-width="1.8" stroke-dasharray="4,4">
+      <animate attributeName="stroke-dashoffset" values="0;40" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <!-- Trace 3 -->
+    <path id="path3" d="M 230,420 L 230,480 L 120,480" fill="none" stroke="rgba(34,211,238,0.25)" stroke-width="1.8" stroke-dasharray="4,4">
+      <animate attributeName="stroke-dashoffset" values="40;0" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+    <!-- Trace 4 -->
+    <path id="path4" d="M 230,420 L 230,480 L 340,480" fill="none" stroke="rgba(34,211,238,0.25)" stroke-width="1.8" stroke-dasharray="4,4">
+      <animate attributeName="stroke-dashoffset" values="0;40" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Moving Data Pulses along Traces -->
+    <circle r="4" fill="#22D3EE" filter="url(#gSm)">
+      <animateMotion dur="4s" repeatCount="indefinite" path="M 80,180 L 160,180 L 200,220 L 200,270"/>
+    </circle>
+    <circle r="4" fill="#22D3EE" filter="url(#gSm)">
+      <animateMotion dur="3.5s" repeatCount="indefinite" path="M 380,180 L 300,180 L 260,220 L 260,270"/>
+    </circle>
+    <circle r="4" fill="#22D3EE" filter="url(#gSm)">
+      <animateMotion dur="5s" repeatCount="indefinite" path="M 230,420 L 230,480 L 120,480"/>
+    </circle>
+    <circle r="4" fill="#22D3EE" filter="url(#gSm)">
+      <animateMotion dur="5s" repeatCount="indefinite" path="M 230,420 L 230,480 L 340,480"/>
+    </circle>
+
+    <!-- Edge Sensor Nodes -->
+    <circle cx="80" cy="180" r="8" fill="rgba(124,58,237,0.12)" stroke="rgba(124,58,237,0.5)" stroke-width="1.5"/>
+    <circle cx="80" cy="180" r="3" fill="#22D3EE">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="80" y="160" font-family="'Fira Code',monospace" font-size="10" fill="#94A3B8" text-anchor="middle">SENSORS</text>
+    
+    <circle cx="380" cy="180" r="8" fill="rgba(124,58,237,0.12)" stroke="rgba(124,58,237,0.5)" stroke-width="1.5"/>
+    <circle cx="380" cy="180" r="3" fill="#22D3EE">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="380" y="160" font-family="'Fira Code',monospace" font-size="10" fill="#94A3B8" text-anchor="middle">RF_COMM</text>
+
+    <circle cx="120" cy="480" r="8" fill="rgba(124,58,237,0.12)" stroke="rgba(124,58,237,0.5)" stroke-width="1.5"/>
+    <circle cx="120" cy="480" r="3" fill="#22D3EE"/>
+    <text x="120" y="505" font-family="'Fira Code',monospace" font-size="10" fill="#94A3B8" text-anchor="middle">POWER</text>
+
+    <circle cx="340" cy="480" r="8" fill="rgba(124,58,237,0.12)" stroke="rgba(124,58,237,0.5)" stroke-width="1.5"/>
+    <circle cx="340" cy="480" r="3" fill="#22D3EE"/>
+    <text x="340" y="505" font-family="'Fira Code',monospace" font-size="10" fill="#94A3B8" text-anchor="middle">ACTUATORS</text>
+
+    <!-- Central Microcontroller Chip (MCU) -->
+    <g transform="translate(170, 260)">
+      <!-- Chip shadow and glow -->
+      <rect x="0" y="0" width="120" height="120" rx="14" fill="rgba(124,58,237,0.12)" stroke="rgba(124,58,237,0.5)" stroke-width="2" filter="url(#gSm)">
+        <animate attributeName="stroke-opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      
+      <!-- Outer Pins -->
+      <!-- Left side pins -->
+      <line x1="-10" y1="20" x2="0" y2="20" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <line x1="-10" y1="40" x2="0" y2="40" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <line x1="-10" y1="60" x2="0" y2="60" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <line x1="-10" y1="80" x2="0" y2="80" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <line x1="-10" y1="100" x2="0" y2="100" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <!-- Right side pins -->
+      <line x1="120" y1="20" x2="130" y2="20" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <line x1="120" y1="40" x2="130" y2="40" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <line x1="120" y1="60" x2="130" y2="60" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <line x1="120" y1="80" x2="130" y2="80" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <line x1="120" y1="100" x2="130" y2="100" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <!-- Top pins -->
+      <line x1="20" y1="-10" x2="20" y2="0" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <line x1="40" y1="-10" x2="40" y2="0" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <line x1="60" y1="-10" x2="60" y2="0" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <line x1="80" y1="-10" x2="80" y2="0" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <line x1="100" y1="-10" x2="100" y2="0" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <!-- Bottom pins -->
+      <line x1="20" y1="120" x2="20" y2="130" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <line x1="40" y1="120" x2="40" y2="130" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <line x1="60" y1="120" x2="60" y2="130" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <line x1="80" y1="120" x2="80" y2="130" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+      <line x1="100" y1="120" x2="100" y2="130" stroke="rgba(124,58,237,0.5)" stroke-width="3"/>
+
+      <!-- Inner Chip details -->
+      <rect x="15" y="15" width="90" height="90" rx="8" fill="rgba(0,0,0,0.15)" stroke="rgba(255,255,255,0.05)"/>
+      <text x="60" y="48" font-family="'Fira Code',monospace" font-size="11" font-weight="bold" fill="#F8FAFC" text-anchor="middle" letter-spacing="1">PRONOY</text>
+      <text x="60" y="65" font-family="'Fira Code',monospace" font-size="9" fill="#22D3EE" text-anchor="middle" letter-spacing="1.5">STM32F4</text>
+      <text x="60" y="80" font-family="'Fira Code',monospace" font-size="8" fill="#94A3B8" text-anchor="middle" opacity="0.6">SYS_RUNNING</text>
+      
+      <circle cx="28" cy="28" r="3" fill="#10B981"/>
+    </g>
+  </g>
+
+  <!-- Identity info inside Left Panel -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="0.5s" dur="0.5s" fill="freeze"/>
+    <rect x="66" y="475" width="300" height="28" rx="14" fill="rgba(124,58,237,0.12)" stroke="rgba(124,58,237,0.5)" stroke-width="1"/>
+    <text x="216" y="494" font-family="'Fira Code',monospace" font-size="12" fill="#F8FAFC" text-anchor="middle" letter-spacing="3.5">PRONOY BISWAS</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="0.8s" dur="0.5s" fill="freeze"/>
+    <rect x="86" y="512" width="260" height="26" rx="13" fill="rgba(34,211,238,0.1)" stroke="rgba(34,211,238,0.25)" stroke-width="1"/>
+    <text x="216" y="530" font-family="'Fira Code',monospace" font-size="10" fill="#94A3B8" text-anchor="middle" letter-spacing="2">ECE STUDENT  ·  INDIA</text>
+  </g>
+  <!-- Status -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="1.1s" dur="0.5s" fill="freeze"/>
+    <circle cx="152" cy="558" r="4.5" fill="#10B981">
+      <animate attributeName="fill-opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="166" y="562" font-family="'SF Mono',monospace" font-size="11" fill="#10B981">System Online</text>
+  </g>
+
+  <!-- ====== RIGHT PANEL (Clean Terminal Layout) ====== -->
+  <rect x="462" y="14" width="704" height="582" rx="18" fill="#0F172A" fill-opacity="0.62" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+  <rect x="462" y="14" width="704" height="582" rx="18" fill="none" stroke="rgba(34,211,238,0.14)" stroke-width="1" filter="url(#gMd)"/>
+  
+  <!-- Right terminal window top controls -->
+  <circle cx="488" cy="37" r="6.5" fill="#FF5F56"/>
+  <circle cx="508" cy="37" r="6.5" fill="#FFBD2E"/>
+  <circle cx="528" cy="37" r="6.5" fill="#27C93F"/>
+  <text x="814" y="43" font-family="'Fira Code',monospace" font-size="11" fill="#94A3B8" opacity="0.5" text-anchor="middle">pronoy@github ~ whoami</text>
+
+  <!-- Prompt -->
+  <text x="480" y="92" font-family="'Fira Code',monospace" font-size="12" fill="#94A3B8" opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="0.3s" dur="0.3s" fill="freeze"/>
+    <tspan fill="#10B981">pronoy@github</tspan><tspan fill="#94A3B8">:</tspan><tspan fill="#22D3EE">~</tspan><tspan fill="#94A3B8">$ </tspan><tspan fill="#F8FAFC">./welcome.sh</tspan>
+  </text>
+  
+  <!-- Greeting -->
+  <text x="480" y="128" font-family="system-ui,'Segoe UI',sans-serif" font-size="28" font-weight="700" fill="#F8FAFC" opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.4s" fill="freeze"/>Hi there &#x1F44B;  I'm</text>
+  <!-- Name -->
+  <text x="480" y="172" font-family="system-ui,'Segoe UI',sans-serif" font-size="42" font-weight="800" fill="url(#accentG)" filter="url(#gSm)" opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="0.9s" dur="0.4s" fill="freeze"/>Pronoy Biswas</text>
+
+  <!-- CYCLING ROLES (CSS Transition - 100% Robust, NO Overlapping) -->
+  <text x="480" y="210" class="role role-1" opacity="0">&gt;_ Embedded Systems Engineer</text>
+  <text x="480" y="210" class="role role-2" opacity="0">&gt;_ IoT &amp; Firmware Developer</text>
+  <text x="480" y="210" class="role role-3" opacity="0">&gt;_ AI / ML Enthusiast</text>
+  <text x="480" y="210" class="role role-4" opacity="0">&gt;_ Full Stack Developer</text>
+  <text x="480" y="210" class="role role-5" opacity="0">&gt;_ Open Source Contributor</text>
+
+  <!-- Typing cursor -->
+  <rect x="480" y="194" width="10" height="20" rx="1.5" fill="#22D3EE" filter="url(#gSm)" opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="1.2s" dur="0.1s" fill="freeze"/>
+    <animate attributeName="opacity" values="1;0;1" begin="1.4s" dur="0.9s" repeatCount="indefinite"/>
+    <!-- Horizontal movement sync with roles typing could go here, keeping simple blink to avoid jitter -->
+  </rect>
+
+  <line x1="480" y1="228" x2="1148" y2="228" stroke="rgba(255,255,255,0.08)" stroke-width="1" opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="1.2s" dur="0.4s" fill="freeze"/>
+  </line>
+
+  <!-- Info rows -->
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="1.4s" dur="0.35s" fill="freeze"/>
+    <text x="480" y="260" font-family="'Fira Code',monospace" font-size="14" fill="#7C3AED">&#x1F4CD;</text>
+    <text x="506" y="260" font-family="'SF Mono','Fira Code',monospace" font-size="13" fill="#94A3B8">Location</text>
+    <text x="610" y="260" font-family="'SF Mono',system-ui,monospace" font-size="13" fill="#F8FAFC">West Bengal, India</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="1.6s" dur="0.35s" fill="freeze"/>
+    <text x="480" y="284" font-family="'Fira Code',monospace" font-size="14" fill="#22D3EE">&#x1F393;</text>
+    <text x="506" y="284" font-family="'SF Mono','Fira Code',monospace" font-size="13" fill="#94A3B8">Education</text>
+    <text x="610" y="284" font-family="'SF Mono',system-ui,monospace" font-size="13" fill="#F8FAFC">B.Tech — Electronics &amp; Communication Engg.</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="1.8s" dur="0.35s" fill="freeze"/>
+    <text x="480" y="308" font-family="'Fira Code',monospace" font-size="14" fill="#10B981">&#x1F3AF;</text>
+    <text x="506" y="308" font-family="'SF Mono','Fira Code',monospace" font-size="13" fill="#94A3B8">Focus</text>
+    <text x="610" y="308" font-family="'SF Mono',system-ui,monospace" font-size="13" fill="#F8FAFC">Embedded Systems · IoT · AI/ML · Full Stack</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="2.0s" dur="0.35s" fill="freeze"/>
+    <text x="480" y="332" font-family="'Fira Code',monospace" font-size="14" fill="#7C3AED">&#x1F310;</text>
+    <text x="506" y="332" font-family="'SF Mono','Fira Code',monospace" font-size="13" fill="#94A3B8">GitHub</text>
+    <text x="610" y="332" font-family="'SF Mono',system-ui,monospace" font-size="13" fill="#22D3EE">github.com/pronoy1510</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="2.2s" dur="0.35s" fill="freeze"/>
+    <text x="480" y="356" font-family="'Fira Code',monospace" font-size="14" fill="#10B981">&#x1F4E7;</text>
+    <text x="506" y="356" font-family="'SF Mono','Fira Code',monospace" font-size="13" fill="#94A3B8">LinkedIn</text>
+    <text x="610" y="356" font-family="'SF Mono',system-ui,monospace" font-size="13" fill="#F8FAFC">linkedin.com/in/pronoy-biswas-61216a366</text>
+  </g>
+
+  <line x1="480" y1="374" x2="1148" y2="374" stroke="rgba(255,255,255,0.08)" stroke-width="1" opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="2.4s" dur="0.3s" fill="freeze"/>
+  </line>
+
+  <!-- Skills section -->
+  <text x="480" y="396" font-family="'Fira Code',monospace" font-size="11" fill="#94A3B8" letter-spacing="2.5" opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="2.5s" dur="0.3s" fill="freeze"/>// SKILLS &amp; TECHNOLOGIES</text>
+
+  <!-- Row 1 Skills -->
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="2.7s" dur="0.5s" fill="freeze"/>
+    <rect x="480" y="407" width="30" height="22" rx="11" fill="url(#pillV)" stroke="rgba(124,58,237,0.5)" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="495" y="422" font-family="'Fira Code',monospace" font-size="11" fill="#F8FAFC" text-anchor="middle">C</text>
+    
+    <rect x="516" y="407" width="38" height="22" rx="11" fill="url(#pillV)" stroke="rgba(124,58,237,0.5)" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="535" y="422" font-family="'Fira Code',monospace" font-size="11" fill="#F8FAFC" text-anchor="middle">C++</text>
+    
+    <rect x="560" y="407" width="56" height="22" rx="11" fill="url(#pillC)" stroke="#22D3EE" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="588" y="422" font-family="'Fira Code',monospace" font-size="11" fill="#22D3EE" text-anchor="middle">Python</text>
+    
+    <rect x="622" y="407" width="62" height="22" rx="11" fill="url(#pillC)" stroke="#10B981" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="653" y="422" font-family="'Fira Code',monospace" font-size="11" fill="#10B981" text-anchor="middle">Arduino</text>
+    
+    <rect x="690" y="407" width="52" height="22" rx="11" fill="rgba(239,68,68,0.1)" stroke="rgba(239,68,68,0.3)" stroke-width="1"/>
+    <text x="716" y="422" font-family="'Fira Code',monospace" font-size="11" fill="#FCA5A5" text-anchor="middle">ESP32</text>
+    
+    <rect x="748" y="407" width="52" height="22" rx="11" fill="rgba(59,130,246,0.1)" stroke="rgba(59,130,246,0.3)" stroke-width="1"/>
+    <text x="774" y="422" font-family="'Fira Code',monospace" font-size="11" fill="#93C5FD" text-anchor="middle">STM32</text>
+    
+    <rect x="806" y="407" width="74" height="22" rx="11" fill="url(#pillV)" stroke="rgba(124,58,237,0.5)" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="843" y="422" font-family="'Fira Code',monospace" font-size="11" fill="#F8FAFC" text-anchor="middle">FreeRTOS</text>
+    
+    <rect x="886" y="407" width="50" height="22" rx="11" fill="url(#pillC)" stroke="#22D3EE" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="911" y="422" font-family="'Fira Code',monospace" font-size="11" fill="#22D3EE" text-anchor="middle">React</text>
+    
+    <rect x="942" y="407" width="58" height="22" rx="11" fill="rgba(255,255,255,0.08)" stroke="#94A3B8" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="971" y="422" font-family="'Fira Code',monospace" font-size="11" fill="#F8FAFC" text-anchor="middle">Next.js</text>
+    
+    <rect x="1006" y="407" width="60" height="22" rx="11" fill="url(#pillC)" stroke="#10B981" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="1036" y="422" font-family="'Fira Code',monospace" font-size="11" fill="#10B981" text-anchor="middle">Node.js</text>
+    
+    <rect x="1072" y="407" width="80" height="22" rx="11" fill="rgba(59,130,246,0.1)" stroke="rgba(59,130,246,0.3)" stroke-width="1"/>
+    <text x="1112" y="422" font-family="'Fira Code',monospace" font-size="11" fill="#93C5FD" text-anchor="middle">TypeScript</text>
+  </g>
+
+  <!-- Row 2 Skills -->
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="2.9s" dur="0.5s" fill="freeze"/>
+    <rect x="480" y="436" width="84" height="22" rx="11" fill="rgba(245,158,11,0.1)" stroke="rgba(245,158,11,0.3)" stroke-width="1"/>
+    <text x="522" y="451" font-family="'Fira Code',monospace" font-size="11" fill="#FCD34D" text-anchor="middle">TensorFlow</text>
+    
+    <rect x="570" y="436" width="66" height="22" rx="11" fill="rgba(239,68,68,0.1)" stroke="rgba(239,68,68,0.3)" stroke-width="1"/>
+    <text x="603" y="451" font-family="'Fira Code',monospace" font-size="11" fill="#FCA5A5" text-anchor="middle">PyTorch</text>
+    
+    <rect x="642" y="436" width="66" height="22" rx="11" fill="url(#pillC)" stroke="#10B981" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="675" y="451" font-family="'Fira Code',monospace" font-size="11" fill="#10B981" text-anchor="middle">OpenCV</text>
+    
+    <rect x="714" y="436" width="58" height="22" rx="11" fill="rgba(59,130,246,0.1)" stroke="rgba(59,130,246,0.3)" stroke-width="1"/>
+    <text x="743" y="451" font-family="'Fira Code',monospace" font-size="11" fill="#93C5FD" text-anchor="middle">Docker</text>
+    
+    <rect x="778" y="436" width="44" height="22" rx="11" fill="rgba(245,158,11,0.1)" stroke="rgba(245,158,11,0.3)" stroke-width="1"/>
+    <text x="800" y="451" font-family="'Fira Code',monospace" font-size="11" fill="#FCD34D" text-anchor="middle">AWS</text>
+    
+    <rect x="828" y="436" width="40" height="22" rx="11" fill="rgba(239,68,68,0.1)" stroke="rgba(239,68,68,0.3)" stroke-width="1"/>
+    <text x="848" y="451" font-family="'Fira Code',monospace" font-size="11" fill="#FCA5A5" text-anchor="middle">Git</text>
+    
+    <rect x="874" y="436" width="60" height="22" rx="11" fill="rgba(255,255,255,0.08)" stroke="#94A3B8" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="904" y="451" font-family="'Fira Code',monospace" font-size="11" fill="#F8FAFC" text-anchor="middle">Linux</text>
+    
+    <rect x="940" y="436" width="86" height="22" rx="11" fill="url(#pillC)" stroke="#22D3EE" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="983" y="451" font-family="'Fira Code',monospace" font-size="11" fill="#22D3EE" text-anchor="middle">PostgreSQL</text>
+    
+    <rect x="1032" y="436" width="70" height="22" rx="11" fill="rgba(239,68,68,0.1)" stroke="rgba(239,68,68,0.3)" stroke-width="1"/>
+    <text x="1067" y="451" font-family="'Fira Code',monospace" font-size="11" fill="#FCA5A5" text-anchor="middle">Firebase</text>
+    
+    <rect x="1108" y="436" width="48" height="22" rx="11" fill="rgba(239,68,68,0.1)" stroke="rgba(239,68,68,0.3)" stroke-width="1"/>
+    <text x="1132" y="451" font-family="'Fira Code',monospace" font-size="11" fill="#FCA5A5" text-anchor="middle">Figma</text>
+  </g>
+
+  <line x1="480" y1="472" x2="1148" y2="472" stroke="rgba(255,255,255,0.08)" stroke-width="1" opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="3.1s" dur="0.3s" fill="freeze"/>
+  </line>
+
+  <!-- Connect Section -->
+  <g opacity="0"><animate attributeName="opacity" values="0;1" begin="3.3s" dur="0.5s" fill="freeze"/>
+    <!-- GitHub -->
+    <g transform="translate(480,482)">
+      <circle cx="18" cy="18" r="20" fill="rgba(255,255,255,0.08)" stroke="#94A3B8" stroke-opacity="0.3" stroke-width="1"/>
+      <path d="M18 7c-6.08 0-11 4.92-11 11 0 4.86 3.15 8.98 7.52 10.44.55.1.75-.24.75-.53v-1.87c-3.06.66-3.71-1.48-3.71-1.48-.5-1.27-1.22-1.6-1.22-1.6-1-.68.07-.67.07-.67 1.1.08 1.68 1.13 1.68 1.13.98 1.68 2.57 1.2 3.2.91.1-.71.38-1.2.7-1.47-2.44-.28-5.01-1.22-5.01-5.43 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.4.11-2.91 0 0 .92-.3 3.03 1.13a10.56 10.56 0 012.76-.37c.94.004 1.88.126 2.76.37 2.1-1.43 3.02-1.13 3.02-1.13.6 1.51.22 2.63.11 2.91.7.77 1.13 1.75 1.13 2.95 0 4.22-2.58 5.15-5.03 5.42.4.34.75 1.01.75 2.03v3.02c0 .29.2.64.76.53C25.85 27 29 22.87 29 18c0-6.08-4.92-11-11-11z" fill="#F8FAFC"/>
+    </g>
+    <!-- LinkedIn -->
+    <g transform="translate(528,482)">
+      <circle cx="18" cy="18" r="20" fill="rgba(10,102,194,0.1)" stroke="rgba(10,102,194,0.3)" stroke-width="1"/>
+      <rect x="10" y="14" width="5" height="13" rx="1" fill="#22D3EE"/>
+      <circle cx="12.5" cy="10.5" r="2.8" fill="#22D3EE"/>
+      <path d="M19 14h-5v13h5v-7c0-1.66 1.34-3 3-3s3 1.34 3 3v7h5v-7.5c0-4.14-3.36-7.5-7.5-7.5-1.56 0-3 .48-4.17 1.3L19 14z" fill="#22D3EE" transform="translate(-3.5,0) scale(0.85)"/>
+    </g>
+    <!-- Twitter/X -->
+    <g transform="translate(576,482)">
+      <circle cx="18" cy="18" r="20" fill="rgba(255,255,255,0.08)" stroke="#94A3B8" stroke-opacity="0.3" stroke-width="1"/>
+      <text x="18" y="24" font-family="serif" font-size="19" font-weight="800" fill="#F8FAFC" text-anchor="middle">&#x1D54F;</text>
+    </g>
+    <!-- Globe -->
+    <g transform="translate(624,482)">
+      <circle cx="18" cy="18" r="20" fill="rgba(16,185,129,0.1)" stroke="rgba(16,185,129,0.3)" stroke-width="1"/>
+      <circle cx="18" cy="18" r="9" fill="none" stroke="#10B981" stroke-width="1.6"/>
+      <ellipse cx="18" cy="18" rx="5" ry="9" fill="none" stroke="#10B981" stroke-width="1.6"/>
+      <line x1="9" y1="18" x2="27" y2="18" stroke="#10B981" stroke-width="1.6"/>
+    </g>
+    
+    <!-- Tagline -->
+    <text x="680" y="502" font-family="system-ui,'Segoe UI',sans-serif" font-size="13" fill="#94A3B8">Let's build something <tspan fill="#22D3EE" font-weight="bold">extraordinary</tspan> together &#x1F680;</text>
+    <text x="680" y="522" font-family="'Fira Code',monospace" font-size="11" fill="#94A3B8" opacity="0.6">github.com/pronoy1510  ·  linkedin.com/in/pronoy-biswas-61216a366</text>
+  </g>
+</g>
+
+<!-- OUTER BORDER WITH ROTATING SHIMMER -->
+<rect width="1180" height="610" rx="24" fill="none" stroke="url(#shimmerG)" stroke-width="2"/>
+</svg>
