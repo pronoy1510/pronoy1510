@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pronoy Biswas — GitHub Banner Preview</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #020817;
+    --surface: #0F172A;
+    --border: rgba(255,255,255,0.08);
+    --text: #F8FAFC;
+    --muted: #64748B;
+    --accent: #22D3EE;
+    --purple: #7C3AED;
+    --green: #10B981;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 40px 20px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .header .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(124,58,237,0.15);
+    border: 1px solid rgba(124,58,237,0.4);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-family: 'Fira Code', monospace;
+    color: #C4B5FD;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+  }
+  .header .badge::before { content: '●'; color: #10B981; font-size: 10px; }
+  .header h1 {
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 800;
+    background: linear-gradient(135deg, #7C3AED, #22D3EE, #10B981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+  }
+  .header p {
+    color: var(--muted);
+    font-size: 15px;
+    font-family: 'Fira Code', monospace;
+  }
+
+  /* Toggle Tabs */
+  .tabs {
+    display: flex;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 4px;
+    gap: 2px;
+    margin-bottom: 36px;
+  }
+  .tab {
+    padding: 10px 28px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    transition: all 0.25s ease;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.3px;
+  }
+  .tab.active {
+    background: rgba(124,58,237,0.2);
+    color: #C4B5FD;
+    border: 1px solid rgba(124,58,237,0.4);
+  }
+  .tab:hover:not(.active) { color: var(--text); }
+
+  /* Banner containers */
+  .banner-wrap {
+    width: 100%;
+    max-width: 1180px;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .banner-wrap.visible { display: flex; }
+
+  .banner-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .banner-label span {
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .dark-label span { background: rgba(34,211,238,0.12); color: #22D3EE; border: 1px solid rgba(34,211,238,0.3); }
+  .light-label span { background: rgba(37,99,235,0.1); color: #2563EB; border: 1px solid rgba(37,99,235,0.25); }
+
+  .banner-frame {
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 0 0 1px rgba(124,58,237,0.15), 0 32px 80px rgba(0,0,0,0.6);
+    transition: box-shadow 0.4s ease;
+  }
+  .banner-frame:hover {
+    box-shadow: 0 0 0 1px rgba(34,211,238,0.25), 0 40px 100px rgba(124,58,237,0.15);
+  }
+  .banner-frame img, .banner-frame object {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-height: 250px;
+  }
+
+  /* Both view */
+  .both-wrap {
+    width: 100%;
+    max-width: 1180px;
+    display: none;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .both-wrap.visible { display: flex; }
+
+  /* Features grid */
+  .features {
+    width: 100%;
+    max-width: 1180px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .feature-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    transition: border-color 0.3s;
+  }
+  .feature-card:hover { border-color: rgba(124,58,237,0.35); }
+  .feature-card .icon { font-size: 22px; margin-bottom: 10px; }
+  .feature-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+  .feature-card p { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+  /* Footer note */
+  .note {
+    margin-top: 48px;
+    background: rgba(124,58,237,0.08);
+    border: 1px solid rgba(124,58,237,0.25);
+    border-radius: 14px;
+    padding: 20px 28px;
+    max-width: 860px;
+    width: 100%;
+    text-align: center;
+  }
+  .note p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+  .note code {
+    background: rgba(34,211,238,0.1);
+    border: 1px solid rgba(34,211,238,0.25);
+    color: #22D3EE;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">LIVE PREVIEW</div>
+  <h1>GitHub Profile Banner Demo</h1>
+  <p>pronoy@github ~ ./preview.sh</p>
+</div>
+
+<!-- Tabs -->
+<div class="tabs">
+  <button class="tab active" onclick="show('dark')">🌑 Dark Mode</button>
+  <button class="tab"       onclick="show('light')">☀️ Light Mode</button>
+  <button class="tab"       onclick="show('both')">⚡ Both</button>
+</div>
+
+<!-- Dark only -->
+<div class="banner-wrap visible" id="pane-dark">
+  <div class="banner-label dark-label">
+    <span>DARK MODE</span>
+    <span style="color:var(--muted)">assets/dark.svg — #030712 background · Cyan + Violet + Emerald palette</span>
+  </div>
+  <div class="banner-frame">
+    <img src="assets/dark.svg" alt="Dark Banner"/>
+  </div>
+</div>
+
+<!-- Light only -->
+<div class="banner-wrap" id="pane-light">
+  <div class="banner-label light-label" style="--muted:#64748B">
+    <span style="background:rgba(37,99,235,0.1);color:#2563EB;border:1px solid rgba(37,99,235,0.25);padding:3px 10px;border-radius:6px;font-size:11px;font-weight:600;letter-spacing:1px">LIGHT MODE</span>
+    <span style="color:#94A3B8;font-family:'Fira Code',monospace;font-size:12px">assets/light.svg — #F8FAFC background · Blue + Cyan + Emerald palette</span>
+  </div>
+  <div class="banner-frame" style="background:#F8FAFC; box-shadow: 0 0 0 1px rgba(37,99,235,0.15), 0 32px 80px rgba(15,23,42,0.1);">
+    <img src="assets/light.svg" alt="Light Banner"/>
+  </div>
+</div>
+
+<!-- Both -->
+<div class="both-wrap" id="pane-both">
+  <div>
+    <div class="banner-label dark-label" style="margin-bottom:16px">
+      <span>DARK MODE</span>
+    </div>
+    <div class="banner-frame">
+      <img src="assets/dark.svg" alt="Dark Banner"/>
+    </div>
+  </div>
+  <div>
+    <div class="banner-label" style="margin-bottom:16px">
+      <span style="background:rgba(37,99,235,0.1);color:#2563EB;border:1px solid rgba(37,99,235,0.25);padding:3px 10px;border-radius:6px;font-size:11px;font-weight:600;letter-spacing:1px">LIGHT MODE</span>
+    </div>
+    <div class="banner-frame" style="background:#F8FAFC; box-shadow: 0 0 0 1px rgba(37,99,235,0.15), 0 32px 80px rgba(15,23,42,0.08);">
+      <img src="assets/light.svg" alt="Light Banner"/>
+    </div>
+  </div>
+</div>
+
+<!-- Feature cards -->
+<div class="features">
+  <div class="feature-card">
+    <div class="icon">🎨</div>
+    <h3>Pure SVG + SMIL</h3>
+    <p>Zero JavaScript. All animations are GitHub-compatible SMIL — works everywhere.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">⚡</div>
+    <h3>14-Line ASCII Art</h3>
+    <p>Box-drawing characters reveal line-by-line with staggered opacity animation.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">🌊</div>
+    <h3>Floating Effect</h3>
+    <p>ASCII portrait smoothly floats ±9px vertically using animateTransform.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">🖊️</div>
+    <h3>Cycling Roles</h3>
+    <p>5 role phrases cycle every 30 seconds — each fades in and out smoothly.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">✨</div>
+    <h3>Animated Gradient</h3>
+    <p>ASCII art uses a gradient that shifts between Cyan → Violet → Emerald on loop.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">🌟</div>
+    <h3>Border Shimmer</h3>
+    <p>Outer border gradient rotates 360° every 5 seconds for a premium shimmer effect.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">🎯</div>
+    <h3>Scanline Sweep</h3>
+    <p>A thin translucent line sweeps top-to-bottom continuously on both panels.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">🌐</div>
+    <h3>Dark / Light Adaptive</h3>
+    <p>GitHub auto-serves the correct banner via &lt;picture&gt; + prefers-color-scheme.</p>
+  </div>
+</div>
+
+<!-- Deploy note -->
+<div class="note">
+  <p>
+    📁 Push this folder to a GitHub repo named <code>pronoy1510</code> (same as your username).<br/>
+    The <code>&lt;picture&gt;</code> element in <code>README.md</code> auto-serves <code>dark.svg</code> or <code>light.svg</code>
+    depending on the viewer's GitHub theme. No config needed — it just works. 🚀
+  </p>
+</div>
+
+<script>
+  function show(mode) {
+    document.getElementById('pane-dark').classList.remove('visible');
+    document.getElementById('pane-light').classList.remove('visible');
+    document.getElementById('pane-both').classList.remove('visible');
+
+    if (mode === 'dark')  document.getElementById('pane-dark').classList.add('visible');
+    if (mode === 'light') document.getElementById('pane-light').classList.add('visible');
+    if (mode === 'both')  document.getElementById('pane-both').classList.add('visible');
+
+    document.querySelectorAll('.tab').forEach((t,i) => {
+      t.classList.remove('active');
+      if ((mode==='dark'&&i===0)||(mode==='light'&&i===1)||(mode==='both'&&i===2))
+        t.classList.add('active');
+    });
+  }
+</script>
+</body>
+</html>
